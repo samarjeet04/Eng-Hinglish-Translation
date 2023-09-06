@@ -15,7 +15,7 @@ Installation:
 
 To run the project locally, follow these steps:
 
-1.Clone the repository: git clone https://github.com/yourusername/eng-hinglish-translation.git
+1.Clone the repository: git clone https://github.com/samarjeet04/eng-hinglish-translation.git
 2.Install the required dependencies: pip install -r requirements.txt
 3.Run the Streamlit app: streamlit run main.py
 
