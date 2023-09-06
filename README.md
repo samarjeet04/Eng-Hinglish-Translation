@@ -1,17 +1,16 @@
 # Eng-Hinglish-Translation
 
-# Description:
+Description:
 
 This project is an Eng-Hinglish Translation tool built using Hugging Face Transformers and Streamlit. It allows users to translate English text to both Hindi and Hinglish, a popular Romanized version of Hindi commonly used in informal communication.
-
-# Features:
+ Features:
 
 Translation from English to Hindi using pre-trained models.
 Additional translation from Hindi to Hinglish.
 A user-friendly web interface powered by Streamlit.
 Customizable translation settings.
 
-# Demo
+ Demo
 
 
 
