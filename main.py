@@ -1,5 +1,5 @@
 import streamlit as st
-from transformers import pipeline
+from transformers import pipeline, AutoTokenizer, AutoModelForSeq2SeqLM
 from hing_dict.dict import translation_dict
 
 tokenizer = AutoTokenizer.from_pretrained("facebook/nllb-200-distilled-600M")
