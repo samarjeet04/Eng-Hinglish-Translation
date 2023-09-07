@@ -2,8 +2,11 @@ import streamlit as st
 from transformers import pipeline
 from hing_dict.dict import translation_dict
 
+tokenizer = AutoTokenizer.from_pretrained("facebook/nllb-200-distilled-600M")
+model = AutoModelForSeq2SeqLM.from_pretrained("facebook/nllb-200-distilled-600M")
+
 # Initialize the translation pipeline
-translator = pipeline('translation', model="Helsinki-NLP/opus-mt-en-hi", tokenizer="Helsinki-NLP/opus-mt-en-hi")
+translator = pipeline('translation', model, tokenizer)
 
 # Function to translate English to Hindi
 def englishToHindi(sentence):
