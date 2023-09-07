@@ -1,12 +1,9 @@
 import streamlit as st
-from transformers import pipeline, AutoTokenizer, AutoModelForSeq2SeqLM
+from transformers import pipeline
 from hing_dict.dict import translation_dict
 
-tokenizer = AutoTokenizer.from_pretrained("facebook/nllb-200-distilled-600M")
-model = AutoModelForSeq2SeqLM.from_pretrained("facebook/nllb-200-distilled-600M")
-
 # Initialize the translation pipeline
-translator = pipeline('translation', model, tokenizer)
+translator = pipeline('translation', model="Helsinki-NLP/opus-mt-en-hi", tokenizer="Helsinki-NLP/opus-mt-en-hi")
 
 # Function to translate English to Hindi
 def englishToHindi(sentence):
@@ -53,5 +50,3 @@ if st.button('Translate'):
 # Additional Streamlit components
 st.sidebar.header("Settings")  
 beam_width = st.sidebar.slider("Translation Beam Width", min_value=1, max_value=10, value=4)
-
-
